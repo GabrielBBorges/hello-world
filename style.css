@@ -1,0 +1,33 @@
+
+
+body{
+	background-color: #FFF;
+	font-family: "Open Sans";
+}
+
+.container, table{ 
+	margin: 0 auto;
+	margin-top: 300px;
+	text-align: center;
+
+}
+table{
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: 
+}
+#campoTrailer{
+	padding: 10px;
+	width: 200px;
+}
+button{
+	padding: 10px;
+	color: #4400cc;
+	background-color: #eee6ff; 
+	border: none;
+}
+ th, td{
+	border: 1px solid black;
+
+
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu código</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<section class="container">
+		<table>
+			<tr>
+				<th>Nome</th>
+				<th>Vitórias</th>		
+				<th>Empates</th>
+				<th>Derrotas</th>
+				<th>Ações</th>
+				
+			</tr>
+			<tr>
+				<td>Olá</td>
+			</tr>
+		</table>
+
+	</section>
+	
+
+
+
+
+<script type="text/javascript">
+
+
+
+//DESAFIO:
+
+//TORNAR O IF QUE TA DENTRO DO FILMEFAVORITO COMO UMA FUNCTION;
+//AO INVES DE RETORNAR UMA IMAGEM RETORNA UM TRAILER
+
+/*
+		
+	
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----> AULA 1 - IMERSÂO ALURA -
+ -----> Converter dólar para real(FOI UTILIZADO: prompt() para exibir uma caixa de mensagem na tela, ParseInt para passar um numero para inteiro, e ParseFloat para passar um número para real, e reduzir as decimais utilizando o .toFixed())
+
+	var ValorDolar = parseFloat(prompt("Converta o dólar para real"))   <-- posso colocar o parseFloat ligado no promt como o exemplo. oouu...
+	ValorDolar = ValorDolar * 5.62
+	var ValorDolarDec = ValorDolar.toFixed(2)
+	alert(ValorDolarDec)
+
+  -----> DESAFIO: CONVERTER GRAU CELSIUS EM FARENHAIT
+	var ValorCelso = prompt("Converta Celso para Farenhait")
+	parseFloat(ValorCelso)                   < -------------------- ...Posso colocar separado mesmo
+
+	ValorCelso = (ValorCelso * 9/5)+32
+	alert(ValorCelso)
+
+O que apredemos?
+	- Variáveis var
+	- prompt()
+	- parseFloat - parseInt
+	- .tofixed
+	- Operações 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+*//*
+//AULA 2 - IMERSAO ALURA _ CALCULADORA  E CONDICIONAIS(if, else, operacoes), E EXIBIÇÃO NA TELA(document.write())
+
+	var primeiroValor = parseInt(prompt("Digite o primeiro valor:"))  //<-- posso colocar o parseInt ligado no prompt como o exemplo
+	var segundoValor = parseInt(prompt("Digite o segundo valor:"))
+
+	operacao = parseInt(prompt("Digite 1 para multiplicar, Digite 2 para dividir, Digite 3 para soma, Digite 4 para subtrai"))
+
+	// e se querermos fazer a operação de acordo com o numero que o usuario escolher? a tread?
+		//Devemos utilizar as condicionais if e else ex:
+
+	if(operacao == 1){ // O == comparação é diferente do = de atribuição
+		var resultado = primeiroValor * segundoValor
+		document.write("<h2> " + primeiroValor + " x " + segundoValor + "= " + resultado + "</h2>")
+	}else if(operacao == 2){
+		var resultado = primeiroValor / segundoValor
+		document.write("<h2> " + primeiroValor + " / " + segundoValor + "= " + resultado + "</h2>")
+	}else if(operacao == 3){
+		var resultado = primeiroValor + segundoValor
+		document.write("<h2> " + primeiroValor + " + " + segundoValor + "= " + resultado + "</h2>")
+	}else if(operacao == 4){
+		var resultado = primeiroValor - segundoValor
+		document.write("<h2> " + primeiroValor + " - " + segundoValor + "= " + resultado + "</h2>")
+	}else{
+		document.write("<h2> Valor Inválido </h2>")
+	}
+
+	------> MEU DESAFIO - CALCULANDO O IMC
+		
+		var peso = parseInt(prompt("Digite seu peso"))
+		var altura = parseFloat(prompt("Digite sua altura"))
+
+		var imc = peso/(altura*altura)
+
+		if(imc<10){
+			document.write("Seu estado nutricional é grau V, seu IMC é " + imc.toFixed(2))
+		}else if(imc>10 && imc<12.9){
+			document.write("Seu estado nutricional é grau IV, seu IMC é " + imc.toFixed(2))
+		}else if(imc>13 && imc<15.9){
+			document.write("Seu estado nutricional é grau III, seu IMC é " + imc.toFixed(2))
+		}else if(imc>16 && imc<16.9){
+			document.write("Seu estado nutricional é grau II, seu IMC é " + imc.toFixed(2))
+		}else if(imc>17 && imc<18.7){
+			document.write("Seu estado nutricional é grau I, seu IMC é " + imc.toFixed(2))
+		}else if(imc>18.5 && imc<24.9){
+			document.write("Seu estado nutricional é normal, seu IMC é " + imc.toFixed(2))
+		}else if(imc>25 && imc<29.9){
+			document.write("Seu estado nutricional é pré-Obesidade, seu IMC é " + imc.toFixed(2))
+		}else if(imc>30 && imc<34,5){
+			document.write("Seu estado nutricional é Obesidade grau I, seu IMC é " + imc.toFixed(2))
+		}else if(imc>35 && imc<39.9){
+			document.write("Seu estado nutricional é Obesidade grau II, seu IMC é " + imc.toFixed(2))
+		}else if(imc>40){
+			document.write("Seu estado nutricional é Obesidade grau III, seu IMC é " + imc.toFixed(2))
+		}
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*//*
+
+AULA 3 - MENTALISTA, LAÇOS DE REPETIÇÂO(While), E NUMEROS ALEATÓRIOS(Math.random())
+
+	var numeroSecreto = parseInt(Math.random() * 10) //Quando utilizamos a função Math.random apens de 1 a 0 ele joga um numero aleatorio, e se multiplicamos por 10 ele vai deixar fica um numero aleatorio até o 10
+	var tentativas = 3
+
+while(tentativas > 0){  //Só terá 3 tentativas para acerta qual é o numero secreto, assim o numero de tenttivas vai diminuindo até chegar em 0 tentativas( isso é um laço de repetição)
+	var chute = parseInt(prompt("Digite um número de 1 ao 10, e tente adivinha qual é o certo"))
+	if(numeroSecreto == chute){
+		alert("Acertou!")
+		break //Como acertou qual numero é o correto , não vai precisar repetir o codigo denovo
+	}else if(chute > numeroSecreto){
+		alert("O valor é menor...")
+		tentativas = tentativas - 1
+	}else if(chute < numeroSecreto){
+		alert("O valor é maior")
+		tentativas = tentativas - 1
+	}
+}
+
+	if (chute != numeroSecreto){
+		alert("Suas tentativas acabaram, o numeroSecreto era " + numeroSecreto)
+	}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+*//*
+
+AULA 4 - ALURAFLIX, ARRAYS, UTILIZAMOS LAÇOS TAMBÉM(for()), A FUNÇÂO .push(), E TAMBEM a FUNÇÃO .length()
+
+//curiosidade: Pode ser feito uma array desse jeito também:
+	//var mangas =[]  -> Deixe sem nemhum valor
+	// mangas.pus
+var mangas = ["the Promised Neverland", "Fire Punch", "Hunter x Hunter", "Boa Noite punpun"] 
+	//console.log(mangas.length) ->essa função .length() dirá quantos valores tem nesse array
+
+	for(var m = 0; m<mangas.length; m++){	//Se quisermos adicionar mais um mangá no array, não vai precisa mais ficar alterando o numero do indice no for toda hora como antes, deixando de ser algo estático						
+		document.write("<br>"+ mangas[m])									
+	}																			
+
+var listaMangas = []
+
+	listaMangas.push("https://m.media-amazon.com/images/M/MV5BMTYwYjYyZDgtMTQ3My00YTI4LThmZTUtZmU1MjllOWRlOTdhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_UX182_CR0,0,182,268_AL_.jpg")
+	listaMangas.push("https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UX182_CR0,0,182,268_AL_.jpg")
+	listaMangas.push("https://m.media-amazon.com/images/M/MV5BMTNmZDE2NDEtNTg3MS00OTE1LThlZGUtOGZkZTg0NTUyNGVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UX182_CR0,0,182,268_AL_.jpg")
+
+	for(x=0; x<listaMangas.length; x++){
+		document.write("<br><br><img src="+listaMangas[x]+">")
+	}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+*/// AULA 5 - REFATORANDO O ALURAFLIX COM FUNÇÕES
+
+/*
+HTML
+	<!--<section class="container">
+		<h1>Digite aqui seu filme favorito: </h1>
+		<br>
+		<input type="text" name="filme" id ="campoFilme" placeholder="Digite o link do seu filme favorito"> </input> A informação que vai ser digitada nesse Indentificador vai ficar guardada no document.querySelector() no js.
+		<br><br>
+		<button onClick="adicionarFilmeFavorito()">Adicionar</button><br> Pra indicar que é uma função, deve ter esse () escrito no nome da função dentro do onClick. No momento em que for clicar nesse botão, vai ser acionada essa função
+		<br>
+		<div id="listaFilmes">
+			
+			//Aqui vai ser apresentado o valor
+		</div>
+	</section>-->
+
+SCRIPT
+function adicionarFilmeFavorito(){
+
+	var campoFilmeFavorito = document.querySelector('#campoFilme') //Quando digita algo dentro do input lá no html a informação vai ficar guardada aqui
+	//console.log(campoFilmeFavorito) //Não vai mostrar nenhuma informação que foi digitada lá porque devemos utilizar o value para que seja exibida
+	var filmeFavorito = campoFilmeFavorito.value //Nessa variável filmefavorito vai apresentar o valor que ficou guardada na variavel campoFilmefavorito a partir do comando .value
+	if (filmeFavorito.endsWith('.jpg')) { //Se a informação digitada no input o final dela for igual a .jpg, vai executar a imagem...
+	listarFilmesNaTela(filmeFavorito) //O link do filme vai ta guardado no filmeFavorito , que então vai ser executado a partir da function listarFilmesNaTela
+	}else{ //...senão, vai mandar uma mensagem para digitar um link que tenha final igual a .jpg
+		alert("Digite um link!!! ")
+	}
+
+	campoFilmeFavorito.value = null
+}	//Eu quero que quando 
+
+function listarFilmesNaTela(filmeEscolhido){ //O filmeEscolhido foi eu que escolhir o nome dele, posso chamar ele do que quiser, se eu quiser chmar de daviMeuSobrinho é problema meu, desde que esteje com o mesmo nome no valor da variavel que eu vou criar td bem. OBS: criamos essa função por que caso queiramos utilizar esse funcionamento em outro lugar a criação dessa função vai facilitar,
+
+	//var listarFilmes //= document.querySelector('#FilmesExiredddddddddgfdgdsfbido')
+	var elementoFilme =  "<img src="+filmeEscolhido+">" //O filmeEscolhido vai ficar guardado o valor do FilmeFavorito
+	listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme //Eçe pega o elemento do html chamado de listaFilmes a partir do .innerHTML e adiciona um filme(elementoFilme)
+}
+*/
+
+
+
+
+</script>
+</body>
+</html>
